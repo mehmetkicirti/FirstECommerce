@@ -1,0 +1,17 @@
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.Service.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.Service.pdb
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.DataAccess.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\EntityFramework.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.DataAccess.pdb
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.DataAccess.dll.config
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\EntityFramework.xml
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\obj\Debug\SomethingHere.Service.csprojAssemblyReference.cache
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\obj\Debug\SomethingHere.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\obj\Debug\SomethingHere.Service.csproj.CopyComplete
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\obj\Debug\SomethingHere.Service.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\obj\Debug\SomethingHere.Service.pdb
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.Service.dll.config
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.Utility.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Service\bin\Debug\SomethingHere.Utility.pdb

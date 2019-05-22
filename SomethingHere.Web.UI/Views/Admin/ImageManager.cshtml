@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "ImageManager";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-info">
+            <div class="box-header">
+                <h3 class="box-title"> <--- Image Manage Resource---> </h3>
+            </div>
+            @using (Html.BeginForm("SaveImage", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                {
+
+
+                <div class="box-body">
+                    <label>Search Product</label>
+                    <div class="input-group col-md-6">
+                        <input id="txt_Search" type="text" class="form-control" placeholder="Product Name to Search.." />
+                    </div>
+                    <label>Select Product</label>
+                    <div class="input-group col-md-6">
+                        <select name="ProductId" id="selectProduct" class="form-control">
+                            @*<option value="value">text</option>*@
+                            @using SomethingHere.DataAccess
+                            @foreach (Product product in ViewBag.Products)
+                            {
+                                <option data-product="1" value="@product.ID">@product.ProductName</option>
+                            }
+                        </select>
+                    </div>
+                    <label>Select Image File(s)</label>
+                    <div class="input-group col-md-4">
+                        <input name="Files" type="file" multiple />
+                        @* NAME attribute u saveımagedto daki verileri karsılaması icin kullanıyoruz *@
+                        @* byte array tipleri karsılar //httpPostedFileBase ile post olmasını saglayabiliriz *@
+                    </div>
+                    <br />
+                    <input type="submit" value="Save Image" class="btn btn-primary" />
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+

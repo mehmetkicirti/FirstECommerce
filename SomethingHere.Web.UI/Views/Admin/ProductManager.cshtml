@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "ProductManager";
+    Layout = "~/Views/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- Input addon -->
+        <div class="box box-info">
+            <div class="box-header">
+                <h3 class="box-title">Product Manage</h3>
+            </div>
+            @if (Session["Message"] != null)
+            {
+            <h3><span class="alert-info">@Html.Raw(Session["Message"])</span></h3>
+            }
+            @using (Html.BeginForm("SaveProduct", "Admin", FormMethod.Post))
+            {
+                <div class="box-body">
+                    <br />
+                    <label>Product Name</label>
+                    <div class="input-group">
+
+                        <input name="Name" type="text" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                    </div>
+                    <br />
+                    <label>Product Price</label>
+                    <div class="input-group">
+
+                        <input name="Price" type="text" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                    </div>
+                    <br />
+                    <label>Product Stock</label>
+                    <div class="input-group">
+
+                        <input name="Stock" type="text" class="form-control">
+                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                    </div>
+                    <br />
+                    <label>Product Brand</label>
+                    <div class="input-group">
+
+                        <select name="BrandId" class="form-control">
+                            <option value="0">Please Select Brand</option>
+                            @using SomethingHere.DataAccess
+                            @foreach (Brand item in ViewBag.Brands)
+                            {
+                                <option value="@item.ID">@item.Name</option>
+                            }
+
+                        </select>
+                    </div>
+                    <br />
+                    <label>Product Supplier</label>
+                    <div class="input-group">
+
+                        <select name="SupplierId" class="form-control">
+                            <option value="0">Please Select Brand</option>
+                            @foreach (Supplier item in ViewBag.Supplier)
+                            {
+                                <option value="@item.ID">@item.Name</option>
+                            }
+                        </select>
+                    </div>
+                    <br />
+                    <label>Product AktifOrNot</label>
+                    <div class="input-group">
+                        <input name="IsActive" checked="checked" type="checkbox" />
+                    </div>
+                    <br />
+                    <div class="input-group" style="float:right">
+                        <input type="submit" class="btn btn-lg btn-success " value="save" />
+                    </div>
+                </div>
+            }
+
+
+        </div><!-- /.box -->
+
+    </div>
+</div>
+
+

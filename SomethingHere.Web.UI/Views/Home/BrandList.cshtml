@@ -1,0 +1,15 @@
+﻿@using SomethingHere.DataAccess
+<div class="title_box">Brands{@ViewBag.List.Count}</div>
+<ul class="left_menu">
+    @foreach (Brand item in ViewBag.List)
+    {
+        if (item.ID % 2 == 0)
+        {
+            <li class="even"><a href="/Home/BrandProducts?brandId=@item.ID"><strong>@item.Name</strong></a></li>
+        }
+        else
+        {
+            <li class="odd"><a href="/Home/BrandProducts?brandId=@item.ID"><i>@item.Name</i></a></li>
+        }
+    }
+</ul>

@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using SomethingHere.DataAccess
+<div class="center_title_bar">Latest Products </div>
+@foreach (Product item in ViewBag.Latest)
+{
+    <div class="prod_box">
+        <div class="top_prod_box"></div>
+        <div class="center_prod_box">
+            <div class="product_title" style="font-size:12px;"><a href="/Home/ProductDetail/@item.ID">@item.Brand.Name-@item.ProductName</a></div>
+            <div class="product_img">
+                <a href="details.html">
+
+                    <img src="@item.ProductImage.Where(p=>p.IsActive==true).SingleOrDefault().ImagePath" alt="" border="0" />
+
+                </a>
+            </div>
+            <div class="prod_price"><span class="reduce">@item.Price</span> <span class="price">@item.Price</span></div>
+        </div>
+        <div class="bottom_prod_box"></div>
+        <div class="prod_details_tab"> <a href="#" data-cart="1" data-id="@item.ID" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="~/Images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="~/Images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="~/Images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="/Home/ProductDetail/@item.ID" class="prod_details">details</a> </div>
+    </div>
+}
+<div class="center_title_bar">Reviews Products </div>
+@foreach (CookieProduct product in ViewBag.cookie)
+{
+    <div class="prod_box">
+        <div class="top_prod_box"></div>
+        <div class="center_prod_box">
+            <div class="product_title" style="font-size:12px;"><a href="/Home/ProductDetail/@product.ID">@product.BrandName-@product.Name</a></div>
+            <div class="product_img">
+                <a href="details.html">
+
+                    <img src="@product.ImagePath" alt="" border="0" />
+
+                </a>
+            </div>
+            <div class="prod_price"><span class="reduce">@product.Price</span> <span class="price">@product.Price</span></div>
+        </div>
+        <div class="bottom_prod_box"></div>
+        <div class="prod_details_tab"> <a href="#" data-cart="1" data-id="@product.ID" title="header=[Add to cart] body=[&nbsp;] fade=[on]"><img src="~/Images/cart.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Specials] body=[&nbsp;] fade=[on]"><img src="~/Images/favs.gif" alt="" border="0" class="left_bt" /></a> <a href="#" title="header=[Gifts] body=[&nbsp;] fade=[on]"><img src="~/Images/favorites.gif" alt="" border="0" class="left_bt" /></a> <a href="/Home/ProductDetail/@product.ID" class="prod_details">details</a> </div>
+    </div>
+}
+
+

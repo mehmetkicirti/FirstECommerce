@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "CartDetail";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@if (ViewBag.List.Count <= 0)
+{
+   <h3 class="display-3 alert-info">There is no product into cart</h3>
+
+}
+else
+{<div class="center_title_bar">Cart Details </div>
+
+    <div class="row ">
+        <div class="col-md-12">
+            <table class="table  table-responsive">
+                <thead class="bg-primary">
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Process</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-danger">
+                    
+                        @using SomethingHere.DataAccess
+                        @foreach (Product item in ViewBag.List )
+                        {
+                    <tr>
+                        <td><img style="width:50px;height:50px;" src="@item.ProductImage.Where(p=>p.IsActive==true).FirstOrDefault().ImagePath" /></td>
+                        <td>@item.ProductName</td>
+                        <td>@item.Price</td>
+                        <td>@item.Quantity</td>
+                        <td>@item.TotalPrice</td>
+                        <td>
+                            <span data-change="1" data-process="plus" data-id="@item.ID" style="font-size:large;font-weight:bold;color:green">+</span>&nbsp;
+                            <span data-change="1" data-process="minus" data-id="@item.ID" style="font-size:large;font-weight:bold;color:yellow">-</span>&nbsp;
+                            <span data-change="1" data-process="remove" data-id="@item.ID" style="font-size:large;font-weight:bold;color:red">x</span>&nbsp;
+                        </td>
+                    </tr>
+                        }
+                    
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="/Cart/Buy">Buy Cart</a>
+        </div>
+    </div>
+}

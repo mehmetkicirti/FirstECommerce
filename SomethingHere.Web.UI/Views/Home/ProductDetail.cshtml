@@ -1,0 +1,41 @@
+﻿@model SomethingHere.DataAccess.Product
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="center_content">
+    <div class="center_title_bar">@Model.ProductName</div>
+    <div class="prod_box_big">
+        <div class="top_prod_box_big"></div>
+        <div class="center_prod_box_big">
+            <div class="product_img_big">
+                <a href="javascript:popImage('@Model.ProductImage.FirstOrDefault(p=>p.IsActive==true).ImagePath','Some Title')" title="header=[Zoom] body=[&nbsp;] fade=[on]"><img src="@Model.ProductImage.FirstOrDefault(p=>p.IsActive==true).ImagePath" alt="" border="0" /></a>
+                <div class="thumbs">
+                    @using SomethingHere.DataAccess
+                    @foreach (ProductImage item in Model.ProductImage)
+                    {
+                        <a href="#" title="header=[Thumb1] body=[&nbsp;] fade=[on]">
+                            <img src="@item.ImagePath" alt="" border="0" style="width:30px;height:30px"/></a>
+                    }
+                    </div>
+            <div class="details_big_box">
+                <div class="product_title_big">@Model.ProductName-@Model.ID</div>
+                <div class="specifications">
+                    @using SomethingHere.DataAccess
+                    @foreach (ProductProperty item in Model.ProductProperty)
+                    {
+                       @item.Name<span class="blue"> : @item.Value</span><br />
+                    }
+                    
+
+
+                </div>
+                <div class="prod_price_big"><span class="reduce">@Model.Price</span> <span class="price">@Model.Price</span></div>
+                <a href="#" data-cart="1" data-id="@Model.ID" class="addtocart">add to cart</a> <a href="#" class="compare">compare</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

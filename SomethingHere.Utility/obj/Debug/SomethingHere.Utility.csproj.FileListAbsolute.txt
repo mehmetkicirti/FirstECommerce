@@ -1,0 +1,6 @@
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\bin\Debug\SomethingHere.Utility.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\bin\Debug\SomethingHere.Utility.pdb
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\obj\Debug\SomethingHere.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\obj\Debug\SomethingHere.Utility.dll
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\obj\Debug\SomethingHere.Utility.pdb
+C:\Users\Mehmet\source\repos\SomethingHere.Web.UI\SomethingHere.Utility\obj\Debug\SomethingHere.Utility.csprojAssemblyReference.cache

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa603547cd8d4387a235354465dae374" Name="Diagram1">
+        <EntityTypeShape EntityType="SomethingsHereModel.Brand" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.LoginUser" Width="1.5" PointX="7.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.LoginUserDetail" Width="1.5" PointX="10" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.Order" Width="1.5" PointX="13" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.OrderDetails" Width="1.5" PointX="10.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.Product" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.ProductImage" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.ProductProperty" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.Shipper" Width="1.5" PointX="10.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.Supplier" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SomethingsHereModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="SomethingsHereModel.FK_Product_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_LoginUserDetail_LoginUser" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_Order_LoginUser" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_Order_OrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_Order_Shipper" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_Product_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_ProductImage_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.FK_ProductProperty_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="SomethingsHereModel.ProductCategory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
